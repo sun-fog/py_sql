@@ -93,7 +93,7 @@ def find_client(conn, first_name=None, last_name=None, email=None, phone=None):
         """, (first_name, last_name, email, phone))
         return cur.fetchone()
 
-with psycopg2.connect(database="clients_db", user="postgres", password="MaxPlant1!", host="localhost", port="5432") as conn:
+with psycopg2.connect(database="clients_db", user="postgres", password="password", host="localhost", port="5432") as conn:
 	
     create_db(conn)
     add_client(conn, 'Иван', 'Петров', 'ivan_petrov@mail.ru', '{"+7-911-111-11-11", "+7-921-111-11-11"}')
